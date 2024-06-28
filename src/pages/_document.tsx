@@ -36,12 +36,6 @@ class MyDocument extends Document {
               />
             </>
           )}
-          {/* Google AdSense */}
-          <script
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9456367246304075"
-            crossorigin="anonymous"
-          ></script>
           {/* Google Tag Manager */}
           <script async src={`https://www.googletagmanager.com/gtag/js?id=G-WCY2S7M34S`}></script>
           <script
