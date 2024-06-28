@@ -36,16 +36,24 @@ class MyDocument extends Document {
               />
             </>
           )}
+          {/* Google AdSense */}
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9456367246304075"
+            crossorigin="anonymous"
+          ></script>
           {/* Google Tag Manager */}
           <script async src={`https://www.googletagmanager.com/gtag/js?id=G-WCY2S7M34S`}></script>
-          <script dangerouslySetInnerHTML={{
-            __html: `
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'G-WCY2S7M34S');
             `,
-          }} />
+            }}
+          />
         </Head>
         <body>
           <Main />
