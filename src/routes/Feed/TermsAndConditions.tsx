@@ -3,7 +3,7 @@ import React from 'react';
 const TermsAndConditions: React.FC = () => (
   <div style={{ padding: '20px' }}>
     <h1>Terms and Conditions for Josh&apos;s Tech News</h1>
-    <p>Effective Date: [Date]</p>
+    <p>Effective Date: [2024]</p>
 
     <p>Welcome to Josh&apos;s Tech News. By accessing and using our website, you agree to comply with the following terms and conditions.</p>
 
