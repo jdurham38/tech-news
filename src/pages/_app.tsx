@@ -7,6 +7,7 @@ function App({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout || ((page) => page)
 
   return (
+    <>
           <head><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9456367246304075"
      crossOrigin="anonymous"></script></head>
     <QueryClientProvider client={queryClient}>
@@ -14,6 +15,7 @@ function App({ Component, pageProps }: AppPropsWithLayout) {
         <RootLayout>{getLayout(<Component {...pageProps} />)}</RootLayout>
       </Hydrate>
     </QueryClientProvider>
+      </>
   )
 }
 
