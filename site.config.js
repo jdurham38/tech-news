@@ -15,6 +15,16 @@ const CONFIG = {
       name: `Josh's Tech News`,
       href: "https://github.com/jdurham38/tech-news",
     },
+    {
+      name: `Josh's Personal Portfolio`,
+      href: "https://portfolio-e051inhwl-jdurham38s-projects.vercel.app",
+    },
+    {
+      name: `Josh's Freelance Portfolio`,
+      href: "https://www.joshswebdevelopment.com",
+    },
+    
+
   ],
   // blog setting (required)
   blog: {
