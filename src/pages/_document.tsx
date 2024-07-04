@@ -7,6 +7,34 @@ class MyDocument extends Document {
       <Html lang={CONFIG.lang}>
         <Head>
           <link rel="icon" href="/favicon.ico" />
+          <script 
+            async 
+            src="https://fundingchoicesmessages.google.com/i/pub-9456367246304075?ers=1" 
+            nonce="TkOu9hg_ZdacEmvo1tAXvg"
+          ></script>
+          <script 
+            nonce="TkOu9hg_ZdacEmvo1tAXvg" 
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function() {
+                  function signalGooglefcPresent() {
+                    if (!window.frames['googlefcPresent']) {
+                      if (document.body) {
+                        const iframe = document.createElement('iframe');
+                        iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;';
+                        iframe.style.display = 'none';
+                        iframe.name = 'googlefcPresent';
+                        document.body.appendChild(iframe);
+                      } else {
+                        setTimeout(signalGooglefcPresent, 0);
+                      }
+                    }
+                  }
+                  signalGooglefcPresent();
+                })();
+              `
+            }}
+          ></script>
           <link
             rel="apple-touch-icon"
             sizes="192x192"
@@ -43,11 +71,11 @@ class MyDocument extends Document {
           <script
             dangerouslySetInnerHTML={{
               __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-WCY2S7M34S');
-            `,
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-WCY2S7M34S');
+              `,
             }}
           />
         </Head>

@@ -5,7 +5,6 @@ import Modal from './Modal';
 import PrivacyPolicy from './PrivacyPolicy'; 
 import TermsAndConditions from './TermsAndConditions';
 
-
 const d = new Date();
 const y = d.getFullYear();
 const from = +CONFIG.since;
@@ -28,8 +27,8 @@ const Footer: React.FC<Props> = ({ className }) => {
         © {CONFIG.profile.name} {from === y || !from ? y : `${from} - ${y}`}
       </a>
       <Links>
-        <LinkButton onClick={() => setShowPrivacyPolicy(true)}>Privacy Policy</LinkButton>
-        <LinkButton onClick={() => setShowTerms(true)}>Terms and Conditions</LinkButton>
+        <a href="/privacy-policy" target="_blank" rel="noreferrer">Privacy Policy</a>
+        <a href="/terms-and-conditions" target="_blank" rel="noreferrer">Terms and Conditions</a>
       </Links>
 
       <Modal show={showPrivacyPolicy} onClose={() => setShowPrivacyPolicy(false)}>
