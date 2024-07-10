@@ -8,11 +8,16 @@ import { queryKey } from "src/constants/queryKey"
 import { GetStaticProps } from "next"
 import { dehydrate } from "@tanstack/react-query"
 import { filterPosts } from "src/libs/utils/notion"
-
+import posthog from 'posthog-js'
 export const getStaticProps: GetStaticProps = async () => {
   const posts = filterPosts(await getPosts())
   await queryClient.prefetchQuery(queryKey.posts(), () => posts)
-
+  posthog.init('phc_Hx2VOCQg5vLEv6FAmUQoBLesHU4uymsgkn0yHXvPKPD',
+    {
+        api_host: 'https://us.i.posthog.com',
+        person_profiles: 'identified_only' // or 'always' to create profiles for anonymous users as well
+    }
+)
   return {
     props: {
       dehydratedState: dehydrate(queryClient),
