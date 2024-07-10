@@ -9,7 +9,7 @@ function App({ Component, pageProps }: AppPropsWithLayout) {
   posthog.init('phc_Hx2VOCQg5vLEv6FAmUQoBLesHU4uymsgkn0yHXvPKPD',
     {
         api_host: 'https://us.i.posthog.com',
-        person_profiles: 'identified_only' // or 'always' to create profiles for anonymous users as well
+        person_profiles: 'always' // or 'always' to create profiles for anonymous users as well
     }
 )
   return (
